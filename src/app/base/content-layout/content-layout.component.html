@@ -1,0 +1,9 @@
+<app-navbar (menu)="isShowMenu($event)"></app-navbar>
+
+<app-sidenav (mouseleave)="isMouseLeaveSidebar($event)" (mouseover)="isMouseOverSidebar($event)"
+  (showIcon)="showIconSidebar($event)" [mouseOverSidebar]="mouseOverSidebar" [showMenu]="showMenu"></app-sidenav>
+
+<!-- Content -->
+<div class="p-4" [ngClass]="{'sm:ml-52': !iconSideBar, 'sm:ml-16': iconSideBar}">
+  <router-outlet></router-outlet>
+</div>
